@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+.loogo{
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+}
+.letter{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-animation 35s linear infinite;
+}
+@keyframes rainbow-animation{
+    to {
+        background-position: 4500vh;
+    }
+}
+h1{
+    background: linear-gradient(to bottom,red,yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(163, 231, 138);
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: rgb(237, 116, 10);
+    animation: header 2s ease-in-out;
+}
+@keyframes header{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+nav li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 600;
+}
+nav li:hover{
+    color: rgb(11, 18, 229);
+}
+.main{
+    width: 100%;
+    display: flex;
+}
+.content{
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 5%;
+    color: rgb(228, 15, 15);
+    overflow: hidden;
+    animation: content 2s ease-in-out;
+}
+@keyframes content{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%)
+    }
+}
+.content h1{
+    font-size: 80px;
+    margin-bottom: 1%;
+    letter-spacing: 8px;
+}
+.content h3{
+    font-size: 25px;
+    margin-bottom: 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* span{
+    color: yellow;
+} */
+.content p{
+    font-size: 20px;
+    margin-bottom: 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    padding: 15px 30px;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+button:hover{
+    background-color: red;
+}
+.image{
+    width: 50%;
+    margin-top: 8%;
+    z-index: -1;
+}
+img{
+    width: 40rem;
+    animation: car 5s ease-in-out;
+}
+@keyframes car{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translate(-220%);
+    }
+}
+@media screen and (max-width:1200px) {
+    .content {
+        width: 100%;
+        text-align: center;
+    }
+    .image{
+        width: 100%;
+        position: absolute;
+        bottom: -5%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 20rem;
+    }
+}
